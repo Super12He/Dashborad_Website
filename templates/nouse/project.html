@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Basic Data Presentation of DMS">
+    <meta name="author" content="Harlighet">
+
+    <title>Dashboard for DMS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard-upload.css" rel="stylesheet">
+    <link rel="icon" href="./image/favicon.ico">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="./js/html5shiv.min.js"></script>
+      <script src="./js/respond.min.js"></script>
+    <![endif]-->
+	<script type="text/javascript">
+		// Run capabilities test
+		enhance({
+			loadScripts: [
+				'js/jQuery.fileinput.js',
+				'js/example.js'
+			],
+			loadStyles: ['css/enhanced.css']
+		});
+	</script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"> DMS CONSOLE <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+              <li><a href="/py/Statistics/metronic/index.html"><span style="font-size:1em;padding-right:1em" class="glyphicon glyphicon-home" aria-hidden="true"></span>{Link_Overview}</a></li>
+              <li class="active"><a href="#"><span style="font-size:1em;padding-right:1em" class="glyphicon glyphicon-send" aria-hidden="true"></span>{Link_Projects}<span class="sr-only">(current)</span></a></li>
+              <li><a href="/py/Statistics/detail.py"><span style="font-size:1em;padding-right:1em" class="glyphicon glyphicon-user" aria-hidden="true"></span>{Link_Details}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		<h1 class="page-header">Uploads - daily report file</h1>
+		<h2>English Only</h2>
+		<form action="#">
+		  <p class="file">
+			<input type="file" name="file" id="file" />
+			<label for="file">Choose your file</label>
+		  </p>
+		  <p class="submit">
+			<input type="submit" name="upload" id="upload" value="Upload" />
+		  </p>
+		</form>
+			<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<form method="post" action="#">
+					<div class="field">
+						<label for="name">Your Name</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div class="field">
+						<label for="email">Type</label>
+						<input type="text" name="email" id="email" />
+					</div>
+					<div class="field">
+						<label for="message">Code</label>
+						<input type="text" name="email" id="email" />
+					</div>
+					<div class="field">
+						<label for="message">Phase</label>
+						<select>
+						  <option value="volvo">Alpha</option>
+						  <option value="saab">Beta</option>
+						  <option value="opel">Gamma</option>
+						  <option value="audi">Post Gamma</option>
+						</select>
+					</div>					
+				</form>
+			</section>
+		</footer>
+
+	</div>
+
+	
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+    <!-- DataTables Integration -->
+    <link rel="stylesheet" type="text/css" href="./DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="./DataTables/datatables.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#ReportSummaryTable').DataTable({
+                ordering: true,
+                searching: true,
+                autoWidth: true,
+                paging: false
+                });
+		});
+	</script>
+  </body>
+</html>
+
